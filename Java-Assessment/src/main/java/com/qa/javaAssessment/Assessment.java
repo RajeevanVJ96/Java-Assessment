@@ -137,7 +137,16 @@ public class Assessment {
 	//amISearch("I have been in Amsterdam") ==> 0
 
 	public int amISearch(String arg1) {
-		String target = "am";
+		String input = arg1.toLowerCase();
+		String[] arg1Split = input.split(" ");
+		int counter = 0;
+		for (String s: arg1Split){
+			if (s == "am"){
+				counter++;
+			}
+		}
+
+		return counter;
 		return -1;
 		
 	}
